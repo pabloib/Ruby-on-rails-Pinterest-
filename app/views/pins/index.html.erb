@@ -1,9 +1,9 @@
 <div class="container">
-  <h1>Listing pins</h1>
+  <h1>Crear un nuevo pin</h1>
   <table>
     <thead>
       <tr>
-        <th>Phtoto</th>
+        <th>Photo</th>
         <th>Description</th>
         <th></th>
         <th></th>
@@ -14,7 +14,7 @@
     <tbody>
       <% @pins.each do |pin| %>
         <tr>
-          <td><%= image_tag(pin.phtoto, :style => 'width:300px') %></td>
+          <td><%= image_tag (pin.photo), :style => "width:300px" %></td>
           <td><%= pin.description %></td>
           <td><%= link_to 'Show', pin %></td>
           <td><%= link_to 'Edit', edit_pin_path(pin) %></td>

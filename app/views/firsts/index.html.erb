@@ -1,0 +1,27 @@
+<h1>Listing firsts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pins</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @firsts.each do |first| %>
+      <tr>
+        <td><%= first.pins %></td>
+        <td><%= link_to 'Show', first %></td>
+        <td><%= link_to 'Edit', edit_first_path(first) %></td>
+        <td><%= link_to 'Destroy', first, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New First', new_first_path %>

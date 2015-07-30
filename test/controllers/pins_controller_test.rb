@@ -18,7 +18,7 @@ class PinsControllerTest < ActionController::TestCase
 
   test "should create pin" do
     assert_difference('Pin.count') do
-      post :create, pin: { description: @pin.description, phtoto: @pin.phtoto }
+      post :create, pin: { description: @pin.description, photo: @pin.photo }
     end
 
     assert_redirected_to pin_path(assigns(:pin))
@@ -35,7 +35,7 @@ class PinsControllerTest < ActionController::TestCase
   end
 
   test "should update pin" do
-    patch :update, id: @pin, pin: { description: @pin.description, phtoto: @pin.phtoto }
+    patch :update, id: @pin, pin: { description: @pin.description, photo: @pin.photo }
     assert_redirected_to pin_path(assigns(:pin))
   end
 
